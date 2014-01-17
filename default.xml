@@ -9,7 +9,6 @@
     fetch="ssh://git@bitbucket.org" />
            
   <remote  name="github"
-           fetch=".."
            fetch="https://github.com/*" />
 
   <remote  name="du"
