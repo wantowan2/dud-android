@@ -11,6 +11,6 @@ Syncing DU Source
 
     mkdir ~/dirtyunicorns
     cd ~/dirtyunicorns
-    repo init -u https://github.com/wantowan2/dud-android/manifest.git -b du44
+    repo init -u https://github.com/wantowan2/dud-android.git -b du44
     repo sync -f -j 4 | 8 | 16 | 24 | 32
 
