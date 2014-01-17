@@ -9,7 +9,7 @@
     fetch="ssh://git@bitbucket.org" />
            
   <remote  name="github"
-           fetch="https://github.com/*" />
+           fetch="https://github.com/" />
 
   <remote  name="du"
            fetch="https://github.com/DirtyUnicorns-KitKat/" 
