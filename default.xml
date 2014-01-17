@@ -8,10 +8,6 @@
 <remote  name="bitbucket"
     fetch="ssh://git@bitbucket.org" />
            
-  <remote  name="github"
-           fetch=".."
-           fetch="https://github.com/" />
-
   <remote  name="du"
            fetch="https://github.com/DirtyUnicorns-KitKat/" 
            review="gerrit.dirtyunicorns.com" />
