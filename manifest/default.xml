@@ -22,7 +22,7 @@
            sync-j="4" />
 
 
-  <project path="android" name="wantowan2/dud-android" revision="du44" />
+  <project path="android" name="wantowan2/dud-android/manifest" revision="du44" />
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
   <project path="art" name="CyanogenMod/android_art" />
