@@ -9,7 +9,6 @@
     fetch="ssh://git@bitbucket.org" />
            
   <remote  name="github"
-           fetch=".."
            fetch="https://github.com/" />
 
   <remote  name="du"
@@ -358,11 +357,11 @@
   <project path="packages/apps/Launcher3" name="CyanogenMod/android_packages_apps_Launcher3" />
   <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" />
   <project path="packages/apps/Mms" name="packages_apps_Mms" remote="du" revision="du44" />
-  <project path="packages/apps/MonthCalendarWidget" name="omnirom/android_packages_apps_MonthCalendarWidget" revision="android-4.4" />
+  <project path="packages/apps/MonthCalendarWidget" name="android_packages_apps_MonthCalendarWidget" revision="du44" />
   <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" />
-  <project path="packages/apps/PerformanceControl" name="omnirom/android_packages_apps_PerformanceControl" revision="android-4.4" />
+  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" revision="du44" />
   <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" />
   <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
   <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
