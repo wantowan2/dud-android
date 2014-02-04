@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp"
+  <remote name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
            
-  <remote  name="github"
+<remote name="bitbucket"
+    fetch="ssh://git@bitbucket.org" />
+           
+  <remote name="github"
            fetch="https://github.com/" />
 
-  <remote  name="du"
-           fetch="https://github.com/DirtyUnicorns-KitKat/" 
+  <remote name="du"
+           fetch="https://github.com/DirtyUnicorns-KitKat/"
            review="gerrit.dirtyunicorns.com" />
           
   <default revision="refs/heads/cm-11.0"
            remote="github"
            sync-c="true"
-           sync-f="true"
-           sync-j="8" />
+           sync-j="4" />
 
 
   <project path="android" name="wantowan2/dud-android" revision="du44" />
-  <project path="build" name="CyanogenMod/platform_build" >
 
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
   <project path="art" name="CyanogenMod/android_art" />
-  <project path="bionic" name="CyanogenMod/android_bionic" />
+  <project path="bionic" name="CyanogenMod/android_bionic" revision="cm-11.0" />
   <project path="bootable/diskinstaller" name="CyanogenMod/android_bootable_diskinstaller" />
   <project path="bootable/recovery" name="CyanogenMod/android_bootable_recovery" />
   <project path="cts" name="platform/cts" remote="aosp" revision="refs/tags/android-4.4.2_r1" groups="cts" />
@@ -279,108 +280,106 @@
   <project path="frameworks/mff" name="CyanogenMod/android_frameworks_mff" />
   <project path="frameworks/ml" name="CyanogenMod/android_frameworks_ml" />
   <project path="frameworks/native" name="frameworks_native" remote="du" revision="du44" />
-  <project path="frameworks/opt/calendar" name="CyanogenMod/android_frameworks_opt_calendar" />
-  <project path="frameworks/opt/carddav" name="CyanogenMod/android_frameworks_opt_carddav" />
-  <project path="frameworks/opt/colorpicker" name="CyanogenMod/android_frameworks_opt_colorpicker" />
+  <project path="frameworks/opt/calendar" name="CyanogenMod/android_frameworks_opt_calendar" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/carddav" name="CyanogenMod/android_frameworks_opt_carddav" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/colorpicker" name="CyanogenMod/android_frameworks_opt_colorpicker" remote="github" revision="cm-11.0" />
   <project path="frameworks/opt/datetimepicker" name="platform/frameworks/opt/datetimepicker" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
-  <project path="frameworks/opt/emoji" name="CyanogenMod/android_frameworks_opt_emoji" />
-  <project path="frameworks/opt/inputmethodcommon" name="CyanogenMod/android_frameworks_opt_inputmethodcommon" />
-  <project path="frameworks/opt/mailcommon" name="CyanogenMod/android_frameworks_opt_mailcommon" />
-  <project path="frameworks/opt/mms" name="CyanogenMod/android_frameworks_opt_mms" />
-  <project path="frameworks/opt/net/voip" name="CyanogenMod/android_frameworks_opt_net_voip" />
-  <project path="frameworks/opt/photoviewer" name="CyanogenMod/android_frameworks_opt_photoviewer" />
+  <project path="frameworks/opt/emoji" name="CyanogenMod/android_frameworks_opt_emoji" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/inputmethodcommon" name="CyanogenMod/android_frameworks_opt_inputmethodcommon" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/mailcommon" name="CyanogenMod/android_frameworks_opt_mailcommon" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/mms" name="CyanogenMod/android_frameworks_opt_mms" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/net/voip" name="CyanogenMod/android_frameworks_opt_net_voip" remote="github" revision="cm-11.0" />
+  <project path="frameworks/opt/photoviewer" name="CyanogenMod/android_frameworks_opt_photoviewer" remote="github" revision="cm-11.0" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="du" revision="du44" />
-  <project path="frameworks/opt/vcard" name="CyanogenMod/android_frameworks_opt_vcard" />
-  <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" groups="pdk" />
-  <project path="frameworks/support" name="CyanogenMod/android_frameworks_support" />
-  <project path="frameworks/testing" name="CyanogenMod/android_frameworks_testing" />
+  <project path="frameworks/opt/vcard" name="CyanogenMod/android_frameworks_opt_vcard" remote="github" revision="cm-11.0" />
+  <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" groups="pdk" remote="github" revision="cm-11.0" />
+  <project path="frameworks/support" name="CyanogenMod/android_frameworks_support" remote="github" revision="cm-11.0" />
+  <project path="frameworks/testing" name="CyanogenMod/android_frameworks_testing" remote="github" revision="cm-11.0" />
   <project path="frameworks/uiautomator" name="platform/frameworks/uiautomator" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="frameworks/volley" name="CyanogenMod/android_frameworks_volley" />
-  <project path="frameworks/webview" name="CyanogenMod/android_frameworks_webview" />
-  <project path="frameworks/wilhelm" name="CyanogenMod/android_frameworks_wilhelm" />
-  <project path="hardware/akm" name="CyanogenMod/android_hardware_akm" groups="pdk" />
-  <project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" groups="pdk" />
-  <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" groups="broadcom_wlan" />
-  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" groups="qcom" />
-  <project path="hardware/cm" name="CyanogenMod/android_hardware_cm" />
-  <project path="hardware/invensense" name="CyanogenMod/android_hardware_invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" groups="pdk" />
-  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom" />
-  <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" groups="caf" />
-  <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" groups="qcom" />
-  <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" groups="qcom" />
-  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" groups="qcom" />
-  <project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" groups="caf" />
-  <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" groups="qcom" />
-  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" />
-  <project path="hardware/qcom/media-caf" name="CyanogenMod/android_hardware_qcom_media-caf" groups="caf" />
-  <project path="hardware/qcom/msm8960" name="CyanogenMod/android_hardware_qcom_msm8960" groups="qcom_msm8960" />
+  <project path="frameworks/volley" name="CyanogenMod/android_frameworks_volley" remote="github" revision="cm-11.0" />
+  <project path="frameworks/webview" name="CyanogenMod/android_frameworks_webview" remote="github" revision="cm-11.0" />
+  <project path="frameworks/wilhelm" name="CyanogenMod/android_frameworks_wilhelm" remote="github" revision="cm-11.0" />
+  <project path="hardware/akm" name="CyanogenMod/android_hardware_akm" remote="github" revision="cm-11.0" />
+  <project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" remote="github" revision="cm-11.0" />
+  <project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" remote="github" revision="cm-11.0" />
+  <project path="hardware/cm" name="CyanogenMod/android_hardware_cm" remote="github" revision="cm-11.0" />
+  <project path="hardware/invensense" name="CyanogenMod/android_hardware_invensense" remote="github" revision="cm-11.0" />
+  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" remote="github" revision="cm-11.0" />
+  <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/audio" name="CyanogenMod/android_hardware_qcom_audio" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/camera" name="CyanogenMod/android_hardware_qcom_camera" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/display-caf" name="CyanogenMod/android_hardware_qcom_display-caf" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/media" name="CyanogenMod/android_hardware_qcom_media" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/media-caf" name="CyanogenMod/android_hardware_qcom_media-caf" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/msm8960" name="CyanogenMod/android_hardware_qcom_msm8960" remote="github" revision="cm-11.0" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8x74" name="CyanogenMod/android_hardware_qcom_msm8x74" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/power" name="CyanogenMod/android_hardware_qcom_power" />
-  <project path="hardware/qcom/sensors" name="CyanogenMod/android_hardware_qcom_sensors" />
-  <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" />
-  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" groups="pdk"  />
-  <project path="hardware/samsung_slsi/exynos5" name="CyanogenMod/android_hardware_samsung_slsi_exynos5" />
-  <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" />
-  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" />
-  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" />
-  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" />
-  <project path="libcore" name="CyanogenMod/android_libcore" />
-  <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" groups="pdk-java" />
+  <project path="hardware/qcom/power" name="CyanogenMod/android_hardware_qcom_power" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/sensors" name="CyanogenMod/android_hardware_qcom_sensors" remote="github" revision="cm-11.0" />
+  <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" remote="github" revision="cm-11.0" />
+  <project path="hardware/ril" name="CyanogenMod/android_hardware_ril" remote="github" revision="cm-11.0" groups="pdk" />
+  <project path="hardware/samsung_slsi/exynos5" name="CyanogenMod/android_hardware_samsung_slsi_exynos5" remote="github" revision="cm-11.0" />
+  <project path="hardware/ti/omap3" name="CyanogenMod/android_hardware_ti_omap3" remote="github" revision="cm-11.0" />
+  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="github" revision="cm-11.0" />
+  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="github" revision="cm-11.0" />
+  <project path="hardware/ti/wpan" name="CyanogenMod/android_hardware_ti_wpan" remote="github" revision="cm-11.0" />
+  <project path="libcore" name="CyanogenMod/android_libcore" remote="github" revision="cm-11.0" />
+  <project path="libnativehelper" name="CyanogenMod/android_libnativehelper" remote="github" revision="cm-11.0" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" />
-  <project path="packages/apps/BasicSmsReceiver" name="CyanogenMod/android_packages_apps_BasicSmsReceiver" />
-  <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
-  <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" />
+  <project path="packages/apps/Apollo" name="CyanogenMod/android_packages_apps_Apollo" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/BasicSmsReceiver" name="CyanogenMod/android_packages_apps_BasicSmsReceiver" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" remote="github" revision="cm-11.0" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
-  <project path="packages/apps/Camera2" name="CyanogenMod/android_packages_apps_Camera2" />
+  <project path="packages/apps/Camera2" name="CyanogenMod/android_packages_apps_Camera2" remote="github" revision="cm-11.0" />
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" />
-  <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" />
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
-  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
-  <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
+  <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" remote="github" revision="cm-11.0" />
   <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
   <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="du" revision="du44" />
   <project path="packages/apps/DSPManager" name="packages_apps_DSPManager" remote="du" revision="du44" />
-  <project path="packages/apps/Email" name="CyanogenMod/android_packages_apps_Email" />
+  <project path="packages/apps/Email" name="CyanogenMod/android_packages_apps_Email" remote="github" revision="cm-11.0" />
   <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" revision="refs/tags/android-4.4.2_r1" remote="aosp" />
-  <project path="packages/apps/Gallery2" name="CyanogenMod/android_packages_apps_Gallery2" />
-  <project path="packages/apps/HTMLViewer" name="CyanogenMod/android_packages_apps_HTMLViewer" />
-  <project path="packages/apps/InCallUI" name="CyanogenMod/android_packages_apps_InCallUI" />
-  <project path="packages/apps/KeyChain" name="CyanogenMod/android_packages_apps_KeyChain" />
-  <project path="packages/apps/Launcher3" name="CyanogenMod/android_packages_apps_Launcher3" />
-  <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" />
+  <project path="packages/apps/Gallery2" name="CyanogenMod/android_packages_apps_Gallery2" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/HTMLViewer" name="CyanogenMod/android_packages_apps_HTMLViewer" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/InCallUI" name="CyanogenMod/android_packages_apps_InCallUI" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/KeyChain" name="CyanogenMod/android_packages_apps_KeyChain" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Launcher3" name="CyanogenMod/android_packages_apps_Launcher3" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" remote="github" revision="cm-11.0" />
   <project path="packages/apps/Mms" name="packages_apps_Mms" remote="du" revision="du44" />
-  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" />
+  <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" remote="github" revision="cm-11.0" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" />
-  <project path="packages/apps/PerformanceControl" name="packages_apps_PerformanceControl" remote="du" revision="du44" />
-  <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" />
-  <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" />
-  <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" />
-  <project path="packages/apps/ScreenRecorder" name="ChameleonOS/android_packages_apps_ScreenRecorder" revision="kitkat" />
+  <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" remote="du" revision="du44" />
+  <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Provision" name="CyanogenMod/android_packages_apps_Provision" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/QuickSearchBox" name="CyanogenMod/android_packages_apps_QuickSearchBox" remote="github" revision="cm-11.0" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="du" revision="du44" />
-  <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" />
-  <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" />
-  <project path="packages/apps/Stk" name="CyanogenMod/android_packages_apps_Stk" />
-  <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" />
-  <project path="packages/apps/DashClock" name="CyanogenMod/android_packages_apps_DashClock" />
-  <project path="packages/apps/UnifiedEmail" name="CyanogenMod/android_packages_apps_UnifiedEmail" />
-  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" />
-  <project path="packages/apps/VideoEditor" name="CyanogenMod/android_packages_apps_VideoEditor" />
-  <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" />
-  <project path="packages/apps/VoicePlus" name="CyanogenMod/android_packages_apps_VoicePlus" />
-  <project path="packages/experimental" name="CyanogenMod/android_packages_experimental" />
+  <project path="packages/apps/SmartCardService" name="CyanogenMod/android_packages_apps_SmartCardService" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/SoundRecorder" name="CyanogenMod/android_packages_apps_SoundRecorder" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/SpeechRecorder" name="CyanogenMod/android_packages_apps_SpeechRecorder" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Stk" name="CyanogenMod/android_packages_apps_Stk" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Tag" name="CyanogenMod/android_packages_apps_Tag" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/UnifiedEmail" name="CyanogenMod/android_packages_apps_UnifiedEmail" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/VideoEditor" name="CyanogenMod/android_packages_apps_VideoEditor" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/VoiceDialer" name="CyanogenMod/android_packages_apps_VoiceDialer" remote="github" revision="cm-11.0" />
+  <project path="packages/apps/VoicePlus" name="CyanogenMod/android_packages_apps_VoicePlus" remote="github" revision="cm-11.0" />
+  <project path="packages/experimental" name="CyanogenMod/android_packages_experimental" remote="github" revision="cm-11.0" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="du" revision="du44" />
-  <project path="packages/inputmethods/OpenWnn" name="CyanogenMod/android_packages_inputmethods_OpenWnn" />
-  <project path="packages/inputmethods/PinyinIME" name="CyanogenMod/android_packages_inputmethods_PinyinIME" />
-  <project path="packages/providers/ApplicationsProvider" name="CyanogenMod/android_packages_providers_ApplicationsProvider" />
+  <project path="packages/inputmethods/OpenWnn" name="CyanogenMod/android_packages_inputmethods_OpenWnn" remote="github" revision="cm-11.0" />
+  <project path="packages/inputmethods/PinyinIME" name="CyanogenMod/android_packages_inputmethods_PinyinIME" remote="github" revision="cm-11.0" />
+  <project path="packages/providers/ApplicationsProvider" name="CyanogenMod/android_packages_providers_ApplicationsProvider" remote="github" revision="cm-11.0" />
   <project path="packages/providers/CalendarProvider" name="CyanogenMod/android_packages_providers_CalendarProvider" />
   <project path="packages/providers/ContactsProvider" name="packages_providers_ContactsProvider" remote="du" revision="du44" />
   <project path="packages/providers/DownloadProvider" name="CyanogenMod/android_packages_providers_DownloadProvider" />
@@ -450,7 +449,6 @@
   <project path="sdk" name="CyanogenMod/android_sdk" />
   <project path="system/core" name="system_core" remote="du" revision="du44" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" groups="pdk" />
-  <project path="system/media" name="CyanogenMod/system_media" />
   <project path="system/netd" name="CyanogenMod/android_system_netd" groups="pdk" />
   <project path="system/qcom" name="CyanogenMod/android_system_qcom" groups="qcom" />
   <project path="system/security" name="CyanogenMod/android_system_security" groups="pdk" />
@@ -459,7 +457,7 @@
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="tools/build" name="platform/tools/build" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
-  <project path="tools/emulator" name="platform/tools/emulator" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />  
+  <project path="tools/emulator" name="platform/tools/emulator" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="tools/external/fat32lib" name="platform/tools/external/fat32lib" groups="tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="tools/external/gradle" name="platform/tools/external/gradle" groups="tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
   <project path="tools/idea" name="platform/tools/idea" groups="notdefault,tools" remote="aosp" revision="refs/tags/android-4.4.2_r1" />
@@ -470,5 +468,11 @@
   <project path="vendor/tmobile/apps/ThemeChooser" name="CyanogenMod/themes-platform-vendor-tmobile-apps-ThemeChooser" />
   <project path="vendor/tmobile/libs/com.tmobile.themes" name="CyanogenMod/android_vendor_tmobile_libs_com.tmobile.themes" />
   <project path="vendor/tmobile/providers/ThemeManager" name="CyanogenMod/android_vendor_tmobile_providers_ThemeManager" />
+  
+   <!--DU repos-->
+  <!--misc-->
+   <project path="build" name="build" remote="du" revision="du-44" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
   
 </manifest>
