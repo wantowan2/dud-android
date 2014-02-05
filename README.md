@@ -9,7 +9,7 @@ Get Repo
 Syncing DU Source
 ---------------------------------------
 
-    mkdir ~/dirtyunicorns
-    cd ~/dirtyunicorns
+    mkdir ~/dud
+    cd ~/dud
     repo init -u https://github.com/wantowan2/dud-android.git -b du44
     repo sync -f -j 4 | 8 | 16 | 24 | 32
